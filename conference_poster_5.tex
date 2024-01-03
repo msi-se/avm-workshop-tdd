@@ -175,6 +175,18 @@ Dabei werden die Tests immer wieder ausgeführt, um sicherzustellen, dass die Fu
 
 \section*{Best Practices}
 
+\subsubsection*{Kleine unabhänige Tests}
+Beim Erstellen von Tests sollte darauf geachtet werden, dass sie klein und unabhängig sind. Das bedeutet, dass ein Test nur eine spezifische Funktionalität testet und nicht von anderen Tests abhängig ist. Dadurch wird die Wartbarkeit der Tests erhöht und die Ursache von Fehlern ist leichter zu finden.
+
+\subsubsection*{So wenig Code wie nötig}
+Es sollte nur so viel Code geschrieben werden, wie erforderlich ist, um den Test zu bestehen. Dabei sollte vermieden werden, Code zu implementieren der nicht direkt mit dem aktuellen Testfall zusammenhängt. Dies trägt dazu bei, die Codebasis schlanker und besser wartbar zu machen, da sich jeder geschriebene Code auf spezifische Anforderungen und Funktionalitäten konzentriert.
+
+\subsubsection*{Positve und Negative Tests}
+Beim Schreiben von Tests ist es wichtig, sowohl positive als auch negative Szenarien zu testen. Das bedeutet, dass sowohl Fälle getestet werden sollten, in denen der Code korrekt funktionieren soll, als auch solche, in denen er scheitern soll. So können mögliche Probleme mit dem Code erkannt und sichergestellt werden, dass er robust und zuverlässig ist.
+
+\subsubsection*{Testen Testen Testen}
+Tests sollten immer wieder ausgeführt werden. So kann sichergestellt werden, dass der Code auch nach Änderungen noch korrekt funktioniert. Darüber hinaus ermöglicht es, Fehler frühzeitig zu erkennen und eine zuverlässige Codebasis aufrechtzuerhalten.
+
 \section*{Tools}
 
 \color{SaddleBrown}
