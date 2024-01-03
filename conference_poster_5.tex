@@ -37,6 +37,14 @@
 \usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
 \usepackage{wrapfig} % Allows wrapping text around tables and figures
 \usepackage[ngerman]{babel}
+\usepackage{setspace}
+
+% listings
+\usepackage{listings}
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\scriptsize
+}
 
 % create \gqq command for german quotes
 \newcommand{\gqq}[1]{\glqq #1\grqq}
@@ -189,7 +197,45 @@ Beim Schreiben von Tests ist es wichtig, sowohl positive als auch negative Szena
 \subsubsection*{Testen Testen Testen}
 Tests sollten immer wieder ausgeführt werden. So kann sichergestellt werden, dass der Code auch nach Änderungen noch korrekt funktioniert. Darüber hinaus ermöglicht es, Fehler frühzeitig zu erkennen und eine zuverlässige Codebasis aufrechtzuerhalten.
 
-\section*{Tools}
+\section*{Codebeispiel}
+
+\subsubsection*{Anforderung (Schritt 0)}
+Es ist eine Funktion benötigt, die die Zahlen von 1-3 quadrieren kann.
+Die Funktion soll als Input eine Zahl entgegennehmen und als Output die quadrierte Zahl zurückgeben.
+Die Funktion soll den Namen \gqq{square} haben.
+
+\subsubsection*{Testfälle (Schritt 1 \gqq{Red})}
+
+\begin{lstlisting}[language=Python]
+assert(square(1) == 1) # RED
+assert(square(2) == 4) # RED
+assert(square(3) == 9) # RED
+\end{lstlisting}
+
+\subsubsection*{Implementierung (Schritt 2 \gqq{Green})}
+\begin{lstlisting}[language=Python]
+def square(x):
+    if number == 1:
+        return 1
+    elif number == 2:
+        return 4
+    elif number == 3:
+        return 9
+
+assert(square(1) == 1) # GREEN
+assert(square(2) == 4) # GREEN
+assert(square(3) == 9) # GREEN
+\end{lstlisting}
+
+\subsubsection*{Refactoring (Schritt 3 \gqq{Refactor})}
+\begin{lstlisting}[language=Python]
+def square(x):
+    return x * x
+
+assert(square(1) == 1) # GREEN
+assert(square(2) == 4) # GREEN
+assert(square(3) == 9) # GREEN
+\end{lstlisting}
 
 \color{SaddleBrown}
 \section*{Fazit}
